@@ -16,5 +16,6 @@ clap = { version = "4.5.4", features = ["derive", "env"] }
 md-5 = "0.10.6"
 reqwest = { version = "0.12.2", default-features = false, features = ["rustls-tls", "http2", "charset", "json", "multipart"] }
 serde = { version = "1.0.197", features = ["derive"] }
+serde-aux = "4.5.0"
 serde_json = "1.0.115"
 tokio = { version = "1.36.0", features = ["full"] }

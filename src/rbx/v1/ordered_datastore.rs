@@ -7,6 +7,7 @@
 use reqwest::Response;
 use serde::{de::DeserializeOwned, Deserialize};
 use serde_json::json;
+use serde_aux::prelude::*;
 
 use crate::rbx::v1::{PageSize, UniverseId};
 use crate::rbx::{error::Error, util::QueryString};
@@ -54,6 +55,7 @@ pub struct OrderedIncrementEntryParams {
 pub struct OrderedEntry {
     pub path: String,
     pub id: String,
+    #[serde(deserialize_with = "deserialize_number_from_string")]
     pub value: i64,
 }
 
